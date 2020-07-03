@@ -1,4 +1,4 @@
-# generator-innfactory-react [![NPM version][npm-image]][npm-url]
+# generator-innfactory-react
 
 ## Installation
 
@@ -24,6 +24,7 @@ yo innfactory-react
 -- includeBuildAndDeploy = Creates BuildAndDeploy action
 
 "info@info.com" = githubCommitEmail => REQUIRED
+
 "test-proj" = firebaseProjectId => REQUIRED
 
 yo react-factory:github-workflows "info@info.com" "test-proj" --includeCypressTestsWorkflow --includeBuildAndDeploy

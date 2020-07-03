@@ -1,6 +1,6 @@
 {
   "name": "generator-react-factory",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "homepage": "",
   "author": {
@@ -78,6 +78,6 @@
     "pretest": "eslint .",
     "test": "jest"
   },
-  "repository": "patsta32/generator-innfactory-react",
+  "repository": "https://github.com/innFactory/generator-innfactory-react",
   "license": "MIT"
 }
