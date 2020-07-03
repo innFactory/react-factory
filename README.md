@@ -1,5 +1,8 @@
 # generator-react-factory
 
+[![Version](https://img.shields.io/npm/v/generator-react-factory.svg)](https://www.npmjs.com/package/generator-react-factory)
+[![Downloads](https://img.shields.io/npm/dt/generator-react-factory.svg)](https://www.npmjs.com/package/generator-react-factory)
+
 ## Installation
 
 First, install [Yeoman](http://yeoman.io) and generator-innfactory-react using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
