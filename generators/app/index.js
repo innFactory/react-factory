@@ -140,7 +140,10 @@ const filesArray = [
   { src: "_package.json", dest: "package.json" },
   { src: ".prettierrc.json", dest: ".prettierrc.json" },
   { src: ".prettierignore", dest: ".prettierignore" },
-
+  {
+    src: "_.gitignore",
+    dest: ".gitignore"
+  },
   { src: "screenshot.png", dest: "screenshot.png" },
   { src: "tsconfig.json", dest: "tsconfig.json" },
   { src: "tsconfig.prod.json", dest: "tsconfig.prod.json" },
@@ -296,7 +299,7 @@ module.exports = class extends Generator {
           dest: "lib"
         },
         {
-          src: "lib/.gitignore",
+          src: "lib/_.gitignore",
           dest: "lib/.gitignore"
         },
         {
@@ -325,7 +328,7 @@ module.exports = class extends Generator {
         },
         {
           src: "lib/package.json",
-          dest: "lib/package-lock.json"
+          dest: "lib/package.json"
         }
       );
     }
