@@ -1,4 +1,4 @@
-# generator-innfactory-react
+# generator-react-factory
 
 ## Installation
 
@@ -6,14 +6,27 @@ First, install [Yeoman](http://yeoman.io) and generator-innfactory-react using [
 
 ```bash
 npm install -g yo
-npm install -g generator-innfactory-react
+npm install -g generator-react-factory
 ```
 
 Then generate your new project:
 
 ```bash
-yo innfactory-react
+yo react-factory
 ```
+
+## Contains
+
+The CLI lets you configure a template with following features:
+Everything except the base project is optional.
+
+- [x] Cypress-Tests-Environment
+- [x] Firebase-Integration
+- [x] Github Actions (cypress-test, build-and-deploy to firebase)
+- [x] Snackbars
+- [x] Subfolder Library
+- [x] Service Worker
+- [x] PolyFills (IE11)
 
 ## Subgenerators
 

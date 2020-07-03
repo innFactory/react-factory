@@ -21,9 +21,7 @@
     "yeoman-assert": "^3.1.0",
     "eslint": "^6.6.0",
     "prettier": "^1.19.1",
-    "husky": "^3.0.9",
     "lint-staged": "^9.4.3",
-    "figlet": "^1.4.0",
     "eslint-config-prettier": "^6.6.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-config-xo": "^0.27.2",
@@ -34,7 +32,9 @@
   },
   "dependencies": {
     "chalk": "^4.1.0",
+    "figlet": "^1.4.0",
     "glob": "^7.1.6",
+    "husky": "^3.0.9",
     "lodash": "^4.17.15",
     "semver": "^7.3.2",
     "yeoman-generator": "^4.10.1",
@@ -78,6 +78,6 @@
     "pretest": "eslint .",
     "test": "jest"
   },
-  "repository": "https://github.com/innFactory/generator-innfactory-react",
+  "repository": "hhttps://github.com/innFactory/react-factory",
   "license": "MIT"
 }
