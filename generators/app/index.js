@@ -142,7 +142,7 @@ const filesArray = [
   { src: ".prettierignore", dest: ".prettierignore" },
   {
     src: "gittemplate",
-    dest: "gittemplate"
+    dest: ".gitignore"
   },
   { src: "screenshot.png", dest: "screenshot.png" },
   { src: "tsconfig.json", dest: "tsconfig.json" },
@@ -293,44 +293,7 @@ module.exports = class extends Generator {
     }
 
     if (this.answers.includeLib) {
-      filesArray.push(
-        {
-          src: "lib/**",
-          dest: "lib"
-        },
-        {
-          src: "lib/gittemplate",
-          dest: "lib/gittemplate"
-        },
-        {
-          src: "lib/.storybook/**",
-          dest: "lib/.storybook"
-        },
-        {
-          src: "lib/src/**",
-          dest: "lib/src"
-        },
-        {
-          src: "lib/tsconfig.json",
-          dest: "lib/tsconfig.json"
-        },
-        {
-          src: "lib/tsconfig.test.json",
-          dest: "lib/tsconfig.test.json"
-        },
-        {
-          src: "lib/rollup.config.js",
-          dest: "lib/rollup.config.js"
-        },
-        {
-          src: "lib/README.md",
-          dest: "lib/README.md"
-        },
-        {
-          src: "lib/package.json",
-          dest: "lib/package.json"
-        }
-      );
+      this.composeWith(require.resolve("../lib"));
     }
 
     filesArray.forEach(file => {
