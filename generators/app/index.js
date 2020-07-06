@@ -141,7 +141,7 @@ const filesArray = [
   { src: ".prettierrc.json", dest: ".prettierrc.json" },
   { src: ".prettierignore", dest: ".prettierignore" },
   {
-    src: "_.gitignore",
+    src: "_gignore",
     dest: ".gitignore"
   },
   { src: "screenshot.png", dest: "screenshot.png" },
@@ -299,7 +299,7 @@ module.exports = class extends Generator {
           dest: "lib"
         },
         {
-          src: "lib/_.gitignore",
+          src: "lib/_gignore",
           dest: "lib/.gitignore"
         },
         {
@@ -339,7 +339,7 @@ module.exports = class extends Generator {
         this.destinationPath(file.dest || file.src || file),
         this.data,
         {}, // templateOptions    // not here
-        { globOptions: { ignore: ignorePaths } } // < but here
+        { globOptions: { ignore: ignorePaths, dot: true } } // < but here
       );
     });
   }
