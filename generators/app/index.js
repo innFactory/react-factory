@@ -142,7 +142,7 @@ const filesArray = [
   { src: ".prettierignore", dest: ".prettierignore" },
   {
     src: "gittemplate",
-    dest: ".gitignore"
+    dest: "gittemplate"
   },
   { src: "screenshot.png", dest: "screenshot.png" },
   { src: "tsconfig.json", dest: "tsconfig.json" },
@@ -300,7 +300,7 @@ module.exports = class extends Generator {
         },
         {
           src: "lib/gittemplate",
-          dest: "lib/.gitignore"
+          dest: "lib/gittemplate"
         },
         {
           src: "lib/.storybook/**",
