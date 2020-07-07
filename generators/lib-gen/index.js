@@ -50,7 +50,7 @@ module.exports = class extends Generator {
         dest: "lib/README.md"
       },
       {
-        src: "package.json",
+        src: "_package.json",
         dest: "lib/package.json"
       }
     );
