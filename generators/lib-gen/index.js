@@ -18,10 +18,6 @@ module.exports = class extends Generator {
 
     filesArray.push(
       {
-        src: "**",
-        dest: "lib"
-      },
-      {
         src: "_gittemplate",
         dest: "lib/.gitignore"
       },
