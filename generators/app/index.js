@@ -293,7 +293,7 @@ module.exports = class extends Generator {
     }
 
     if (this.answers.includeLib) {
-      this.composeWith(require.resolve("../lib"));
+      this.composeWith(require.resolve("../lib-gen"));
     }
 
     filesArray.forEach(file => {

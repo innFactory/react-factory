@@ -18,7 +18,7 @@ module.exports = class extends Generator {
 
     filesArray.push(
       {
-        src: "lib/**",
+        src: "**",
         dest: "lib"
       },
       {
@@ -26,31 +26,31 @@ module.exports = class extends Generator {
         dest: "lib/.gitignore"
       },
       {
-        src: "lib/.storybook/**",
+        src: ".storybook/**",
         dest: "lib/.storybook"
       },
       {
-        src: "lib/src/**",
+        src: "src/**",
         dest: "lib/src"
       },
       {
-        src: "lib/tsconfig.json",
+        src: "tsconfig.json",
         dest: "lib/tsconfig.json"
       },
       {
-        src: "lib/tsconfig.test.json",
+        src: "tsconfig.test.json",
         dest: "lib/tsconfig.test.json"
       },
       {
-        src: "lib/rollup.config.js",
+        src: "rollup.config.js",
         dest: "lib/rollup.config.js"
       },
       {
-        src: "lib/README.md",
+        src: "README.md",
         dest: "lib/README.md"
       },
       {
-        src: "lib/package.json",
+        src: "package.json",
         dest: "lib/package.json"
       }
     );
