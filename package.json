@@ -2,13 +2,17 @@
   "name": "generator-react-factory",
   "version": "1.0.8",
   "description": "",
-  "homepage": "",
+  "homepage": "https://innfactory.de",
+  "repository": "https://github.com/innFactory/react-factory",
+  "license": "MIT",
   "author": {
     "name": "patsta32",
     "email": "stadler_patrick@t-online.de"
   },
   "files": [
-    "generators"
+    "generators",
+    "generators/**",
+    "generators/*"
   ],
   "main": "generators/index.js",
   "keywords": [
@@ -78,6 +82,5 @@
     "pretest": "eslint .",
     "test": "jest"
   },
-  "repository": "hhttps://github.com/innFactory/react-factory",
-  "license": "MIT"
+ 
 }
