@@ -16,7 +16,7 @@
     "yeoman-generator"
   ],
   "files": [
-    "generators/lib-gen/templates/src/index.ts"
+    "generators/**"
   ],
   "devDependencies": {
     "yeoman-test": "^1.7.0",
