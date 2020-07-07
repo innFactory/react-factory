@@ -1,6 +1,6 @@
 {
   "name": "generator-react-factory",
-  "version": "1.0.9",
+  "version": "1.0.8",
   "description": "",
   "homepage": "https://innfactory.de",
   "repository": "https://github.com/innFactory/react-factory",
@@ -14,6 +14,9 @@
     "innfactory",
     "generator",
     "yeoman-generator"
+  ],
+  "files": [
+    "generators/lib-gen/templates/src/index.ts"
   ],
   "devDependencies": {
     "yeoman-test": "^1.7.0",
