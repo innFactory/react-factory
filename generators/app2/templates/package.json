@@ -1,79 +1,76 @@
 {
-	"name": "react-lib",
-	"version": "0.0.3",
-	"description": "",
-	"author": "innFactory",
-	"license": "",
-	"repository": "",
-	"main": "dist/index.js",
-	"module": "dist/index.es.js",
-	"jsnext:main": "dist/index.es.js",
-	"engines": {
-		"node": ">=8",
-		"npm": ">=5"
-	},
-	"scripts": {
-		"build": "rollup -c",
-		"start": "start-storybook -p 9001 -c .storybook -s ./src/stories/public",
-		"prepare": "npm run build",
-		"predeploy": "cd example && npm install && npm run build",
-		"deploy": "gh-pages -d example/build",
-		"storybook": "npm start",
-		"build-storybook": "build-storybook"
-	},
-	"dependencies": {
-		"@types/react-qr-reader": "^2.1.3",
-		"classnames": ">= 2.2.6",
-		"lodash": "^4.17.15",
-		"react-geocode": "^0.2.1",
-		"react-location-picker": "^1.5.0",
-		"react-qr-reader": "^2.2.1",
-		"use-resize-observer": "^6.1.0"
-	},
-	"peerDependencies": {
-		"react": "16.13.1",
-		"react-dom": "16.13.1",
-		"@material-ui/core": ">=4.9.13",
-		"@material-ui/icons": ">=4.9.1"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.7.7",
-		"@material-ui/core": "4.9.13",
-		"@material-ui/icons": "4.9.1",
-		"@storybook/addon-actions": "^5.3.9",
-		"@storybook/addon-knobs": "5.3.18",
-		"@storybook/addon-links": "^5.3.9",
-		"@storybook/addon-viewport": "^5.3.18",
-		"@storybook/react": "^5.2.8",
-		"@testing-library/jest-dom": "^4.2.4",
-		"@testing-library/react": "^9.4.0",
-		"@types/classnames": "2.2.7",
-		"@types/google-map-react": "^1.1.7",
-		"@types/jest": "^24.0.24",
-		"@types/react": "16.9.19",
-		"@types/react-dom": "16.9.5",
-		"awesome-typescript-loader": "^5.2.1",
-		"babel-loader": "^8.0.6",
-		"google-map-react": "^1.1.7",
-		"jest": "^24.9.0",
-		"prettier": "2.0.2",
-		"react": "16.13.1",
-		"react-dom": "16.13.1",
-		"rollup": "^1.27.13",
-		"rollup-plugin-commonjs": "10.1.0",
-		"rollup-plugin-node-resolve": "5.2.0",
-		"rollup-plugin-peer-deps-external": "2.2.2",
-		"rollup-plugin-typescript2": "0.27.0",
-		"ts-jest": "^24.2.0",
-		"typescript": "3.8.3"
-	},
-	"files": [
-		"dist"
-	],
-	"browserslist": [
-		">0.2%",
-		"not dead",
-		"not op_mini all",
-		"ie 11"
-	]
+  "name": "react-lib",
+  "version": "0.0.3",
+  "description": "",
+  "author": "innFactory",
+  "license": "",
+  "repository": "",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "start": "start-storybook -p 9001 -c .storybook -s ./src/stories/public",
+    "prepare": "npm run build",
+    "predeploy": "cd example && npm install && npm run build",
+    "deploy": "gh-pages -d example/build",
+    "storybook": "npm start",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@types/react-qr-reader": "^2.1.3",
+    "classnames": ">= 2.2.6",
+    "lodash": "^4.17.15",
+    "react-geocode": "^0.2.1",
+    "react-location-picker": "^1.5.0",
+    "react-qr-reader": "^2.2.1",
+    "use-resize-observer": "^6.1.0"
+  },
+  "peerDependencies": {
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "@material-ui/core": ">=4.9.13",
+    "@material-ui/icons": ">=4.9.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@material-ui/core": "4.9.13",
+    "@material-ui/icons": "4.9.1",
+    "@storybook/addon-actions": "^5.3.9",
+    "@storybook/addon-knobs": "5.3.18",
+    "@storybook/addon-links": "^5.3.9",
+    "@storybook/addon-viewport": "^5.3.18",
+    "@storybook/react": "^5.2.8",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@types/classnames": "2.2.7",
+    "@types/google-map-react": "^1.1.7",
+    "@types/jest": "^24.0.24",
+    "@types/react": "16.9.19",
+    "@types/react-dom": "16.9.5",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "google-map-react": "^1.1.7",
+    "jest": "^24.9.0",
+    "prettier": "2.0.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "rollup": "^1.27.13",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-peer-deps-external": "2.2.2",
+    "rollup-plugin-typescript2": "0.27.0",
+    "ts-jest": "^24.2.0",
+    "typescript": "3.8.3"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all",
+    "ie 11"
+  ]
 }
