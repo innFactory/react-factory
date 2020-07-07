@@ -9,11 +9,6 @@
     "name": "patsta32",
     "email": "stadler_patrick@t-online.de"
   },
-  "files": [
-    "generators",
-    "generators/**",
-    "generators/*"
-  ],
   "main": "generators/index.js",
   "keywords": [
     "innfactory",
@@ -81,6 +76,6 @@
   "scripts": {
     "pretest": "eslint .",
     "test": "jest"
-  },
+  }
  
 }
