@@ -12,9 +12,10 @@
 // You can read more here:
 // https://on.cypress.io/configuration
 // ***********************************************************
-import "@cypress/code-coverage/support";
+import '@cypress/code-coverage/support';
+import 'cypress-react-selector';
 // Import commands.js using ES2015 syntax:
-import "./commands";
+import './commands';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
@@ -22,12 +23,10 @@ import "./commands";
 beforeEach(() => {
 	cy.server();
 
-	cy.clock(Date.UTC(2020, 5, 25, 10, 0, 0), ["Date"]);
+	cy.clock(Date.UTC(2020, 5, 25, 10, 0, 0), ['Date']);
 
 	// Fixtures
-	cy.fixture("example.json").as("testFixture");
+	cy.fixture('example.json').as('testFixture');
 
-	cy.route("GET", "https://myservice.com/test", "@testFixture").as(
-		"testRequest"
-	);
+	cy.route('GET', 'https://myservice.com/test', '@testFixture').as('testRequest');
 });

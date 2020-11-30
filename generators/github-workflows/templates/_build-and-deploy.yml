@@ -1,25 +1,27 @@
 name: Build and Deploy
 on:
-    push:
-        branches:
-            - master
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - "coverage/**/*"
 jobs:
-    build:
-        name: Build and Deploy
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout Repo
-              uses: actions/checkout@master
-            - name: Install Dependencies
-              run: npm install
-            - name: Build
-              run: |
-                  CI=false npm run-script build
-                  rm ./build/static/js/*.map
-            - name: Deploy to Firebase
-              uses: innfactory-ci/firebase-action@master
-              with:
-                  args: deploy
-              env:
-                  FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-                  PROJECT_ID: <%= firebaseProjectId %>
+  build:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: |
+          CI=false npm run-script build
+          rm ./build/static/js/*.map
+      - name: Deploy to Firebase
+        uses: innfactory-ci/firebase-action@master
+        with:
+          args: deploy
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          PROJECT_ID: <%= firebaseProjectId %>

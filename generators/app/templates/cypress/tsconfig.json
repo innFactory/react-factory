@@ -1,12 +1,14 @@
 {
-  "extends": "../tsconfig.json",
-  "include": ["./**/*.ts"],
-  "exclude": [],
-  "compilerOptions": {
-    "types": ["cypress"],
-    "lib": ["es2015", "dom"],
-    "isolatedModules": false,
-    "allowJs": true,
-    "noEmit": true
-  }
+	"extends": "../tsconfig.json",
+	"include": ["../node_modules/cypress", "./*/*.ts"],
+	"exclude": [],
+	"compilerOptions": {
+		"target": "es5",
+		"types": ["node", "cypress", "cypress-react-selector"],
+		"lib": ["es2015", "dom"],
+		"isolatedModules": false,
+		"allowJs": true,
+		"noEmit": false
+	},
+	"sourceType": "module"
 }
