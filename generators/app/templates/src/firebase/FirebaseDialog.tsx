@@ -11,10 +11,10 @@ import {
 	Select,
 	TextField,
 	Theme,
-} from "@material-ui/core";
-import ClearIcon from "@material-ui/icons/Close";
-import * as firebase from "firebase/app";
-import * as React from "react";
+} from '@material-ui/core';
+import ClearIcon from '@material-ui/icons/Close';
+import firebase from 'firebase/app';
+import * as React from 'react';
 import {
 	applyVerificationCode,
 	sendVerificationEmail,
@@ -24,7 +24,7 @@ import {
 	signInWithGoogle,
 	signOut,
 	signUpUser,
-} from "./firebaseMethods";
+} from './firebaseMethods';
 
 interface FirebaseDialogProps {
 	open: boolean;
@@ -34,14 +34,12 @@ interface FirebaseDialogProps {
 export function FirebaseDialog(props: FirebaseDialogProps) {
 	const classes = useStyles();
 
-	const [email, setEmail] = React.useState("");
-	const [password, setPassword] = React.useState("");
-	const [persistence, setPersistence] = React.useState(
-		firebase.auth.Auth.Persistence.NONE
-	);
-	const [code, setCode] = React.useState("");
+	const [email, setEmail] = React.useState('');
+	const [password, setPassword] = React.useState('');
+	const [persistence, setPersistence] = React.useState(firebase.auth.Auth.Persistence.NONE);
+	const [code, setCode] = React.useState('');
 	const [imageCropperOpen, setImageCropperOpen] = React.useState(false);
-	const [imageCropperUrl, setImageCropperUrl] = React.useState("");
+	const [imageCropperUrl, setImageCropperUrl] = React.useState('');
 	const { open, onClose } = props;
 
 	const handleChange = (event: any) => {
@@ -49,11 +47,7 @@ export function FirebaseDialog(props: FirebaseDialogProps) {
 	};
 
 	return (
-		<Dialog
-			open={open}
-			onClick={(e) => e.stopPropagation()}
-			onClose={onClose}
-		>
+		<Dialog open={open} onClick={e => e.stopPropagation()} onClose={onClose}>
 			<DialogTitle>Firebase Admin</DialogTitle>
 			<DialogContent className={classes.container}>
 				<TextField
@@ -65,7 +59,7 @@ export function FirebaseDialog(props: FirebaseDialogProps) {
 					InputProps={{
 						endAdornment: (
 							<InputAdornment variant="filled" position="end">
-								<IconButton onClick={() => setEmail("")}>
+								<IconButton onClick={() => setEmail('')}>
 									<ClearIcon />
 								</IconButton>
 							</InputAdornment>
@@ -81,7 +75,7 @@ export function FirebaseDialog(props: FirebaseDialogProps) {
 					InputProps={{
 						endAdornment: (
 							<InputAdornment variant="filled" position="end">
-								<IconButton onClick={() => setPassword("")}>
+								<IconButton onClick={() => setPassword('')}>
 									<ClearIcon />
 								</IconButton>
 							</InputAdornment>
@@ -108,7 +102,7 @@ export function FirebaseDialog(props: FirebaseDialogProps) {
 				>
 					SignUp
 				</Button>
-				<div style={{ display: "flex", flexDirection: "row" }}>
+				<div style={{ display: 'flex', flexDirection: 'row' }}>
 					<Button
 						className={classes.button}
 						variant="contained"
@@ -118,7 +112,7 @@ export function FirebaseDialog(props: FirebaseDialogProps) {
 						}}
 					>
 						SignInWithApple
-					</Button>{" "}
+					</Button>{' '}
 					<Button
 						className={classes.button}
 						variant="contained"
@@ -140,7 +134,7 @@ export function FirebaseDialog(props: FirebaseDialogProps) {
 					InputProps={{
 						endAdornment: (
 							<InputAdornment variant="filled" position="end">
-								<IconButton onClick={() => setCode("")}>
+								<IconButton onClick={() => setCode('')}>
 									<ClearIcon />
 								</IconButton>
 							</InputAdornment>
@@ -168,15 +162,9 @@ export function FirebaseDialog(props: FirebaseDialogProps) {
 					value={persistence}
 					onChange={handleChange}
 				>
-					<MenuItem value={firebase.auth.Auth.Persistence.LOCAL}>
-						LOCAL
-					</MenuItem>
-					<MenuItem value={firebase.auth.Auth.Persistence.SESSION}>
-						SESSION
-					</MenuItem>
-					<MenuItem value={firebase.auth.Auth.Persistence.NONE}>
-						NONE
-					</MenuItem>
+					<MenuItem value={firebase.auth.Auth.Persistence.LOCAL}>LOCAL</MenuItem>
+					<MenuItem value={firebase.auth.Auth.Persistence.SESSION}>SESSION</MenuItem>
+					<MenuItem value={firebase.auth.Auth.Persistence.NONE}>NONE</MenuItem>
 				</Select>
 				<Button
 					className={classes.button}
@@ -219,12 +207,7 @@ export function FirebaseDialog(props: FirebaseDialogProps) {
 				</Button>
 			</DialogContent>
 			<DialogActions>
-				<Button
-					tabIndex={0}
-					onClick={onClose}
-					color="primary"
-					autoFocus
-				>
+				<Button tabIndex={0} onClick={onClose} color="primary" autoFocus>
 					Ok
 				</Button>
 			</DialogActions>
@@ -235,9 +218,9 @@ export function FirebaseDialog(props: FirebaseDialogProps) {
 const useStyles = makeStyles((theme: Theme) => ({
 	container: {
 		padding: 30,
-		display: "flex",
-		alignItems: "center",
-		flexDirection: "column",
+		display: 'flex',
+		alignItems: 'center',
+		flexDirection: 'column',
 	},
 
 	button: {

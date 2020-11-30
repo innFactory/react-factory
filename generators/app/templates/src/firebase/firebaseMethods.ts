@@ -1,16 +1,16 @@
-import * as firebase from 'firebase/app';
+import firebase from 'firebase/app';
 
 export function signUpUser(email: string, password: string, onSuccess?: () => void, onError?: (error: any) => void) {
 	firebase
 		.auth()
 		.createUserWithEmailAndPassword(email, password)
-		.then(function () {
+		.then(function() {
 			if (onSuccess) {
 				onSuccess();
 			}
 			// Verification email sent.
 		})
-		.catch(function (error) {
+		.catch(function(error) {
 			if (onError) {
 				onError(error);
 			}
@@ -49,7 +49,7 @@ export function signInWithGoogle(onSuccess?: () => void) {
 	firebase
 		.auth()
 		.signInWithPopup(provider)
-		.then(function (result) {
+		.then(function(result) {
 			if (result && result.credential) {
 				// This gives you a Google Access Token.
 				var token = result.credential;
@@ -73,7 +73,7 @@ export function signInWithApple(onSuccess?: () => void) {
 	firebase
 		.auth()
 		.signInWithPopup(provider)
-		.then(function (result) {
+		.then(function(result) {
 			if (result && result.credential) {
 				// This gives you a Google Access Token.
 				var token = result.credential;
@@ -90,13 +90,13 @@ export function signInUser(email: string, password: string, onSuccess?: () => vo
 	firebase
 		.auth()
 		.signInWithEmailAndPassword(email, password)
-		.then(function () {
+		.then(function() {
 			if (onSuccess) {
 				onSuccess();
 			}
 			// Sign In successful
 		})
-		.catch(function (error) {
+		.catch(function(error) {
 			if (onError) {
 				onError(error);
 			}
@@ -108,13 +108,13 @@ export function signOut(onSuccess?: () => void, onError?: (error: any) => void) 
 	firebase
 		.auth()
 		.signOut()
-		.then(function () {
+		.then(function() {
 			if (onSuccess) {
 				onSuccess();
 			}
 			//Signed out successfully
 		})
-		.catch(function (error) {
+		.catch(function(error) {
 			if (onError) {
 				onError(error);
 			}
@@ -146,7 +146,7 @@ export function setPersistenceLevel(
 	firebase
 		.auth()
 		.setPersistence(persistence)
-		.then(function () {
+		.then(function() {
 			if (onSuccess) {
 				onSuccess();
 			}
@@ -155,7 +155,7 @@ export function setPersistenceLevel(
 			}
 			// Verification email sent.
 		})
-		.catch(function (error) {
+		.catch(function(error) {
 			if (onError) {
 				onError(error);
 			}
@@ -184,7 +184,7 @@ export function sendVerificationEmail(onSuccess?: () => void, onError?: (error: 
 		};
 		console.log(actionCodeSettings);
 		user.sendEmailVerification()
-			.then(function () {
+			.then(function() {
 				if (onSuccess) {
 					onSuccess();
 				}
@@ -193,7 +193,7 @@ export function sendVerificationEmail(onSuccess?: () => void, onError?: (error: 
 				}
 				// Verification email sent.
 			})
-			.catch(function (error) {
+			.catch(function(error) {
 				if (onError) {
 					onError(error);
 				}
@@ -214,7 +214,7 @@ export function applyVerificationCode(
 	firebase
 		.auth()
 		.applyActionCode(code)
-		.then(function () {
+		.then(function() {
 			if (onSuccess) {
 				onSuccess();
 			}
@@ -223,7 +223,7 @@ export function applyVerificationCode(
 			}
 			// Verification code applied successfully
 		})
-		.catch(function (error) {
+		.catch(function(error) {
 			if (onError) {
 				onError(error);
 			}
@@ -258,7 +258,7 @@ export async function uploadProfileImage(
 		// Listen for state changes, errors, and completion of the upload.
 		uploadTask.on(
 			firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
-			(snapshot) => {
+			snapshot => {
 				// Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
 				var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
 				console.log('Upload is ' + progress + '% done');
@@ -295,7 +295,7 @@ export async function uploadProfileImage(
 			},
 			() => {
 				// Upload completed successfully, now we can get the download URL
-				uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+				uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
 					onFinished(downloadURL);
 					console.log('File available at', downloadURL);
 				});

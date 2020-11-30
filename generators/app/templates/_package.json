@@ -11,7 +11,7 @@
 		"redux-logger": "3.0.6",<% if (includeLib) { %>
 		"react-lib": "file:lib",<% } %><% if (includeIE11Polyfills) { %>
 		"whatwg-fetch": "^3.0.0",
-		"react-app-polyfill": "1.0.7",
+		"react-app-polyfill": "2.0.0",
 		"fast-text-encoding": "1.0.3",<% } %>
 		"react": "17.0.1",
 		"react-dom": "17.0.1",
@@ -59,7 +59,7 @@
 		"@types/webpack-env": "1.16.0",
 		"rimraf": "3.0.2",
 		"@types/react-redux": "7.1.11",
-		"@types/jest": "24.0.25",<% if (includeCypress) { %>
+		"@types/jest": "24.0.25"<% if (includeCypress) { %>,
 		"@cypress/code-coverage": "^3.8.5",
 		"@cypress/instrument-cra": "^1.4.0",
 		"cypress": "^6.0.1",
