@@ -1,4 +1,5 @@
-import { Todo, TodoAction, TodoActions } from "../model/index";
+import { Todo, TodoAction, TodoActions } from '../model/index';
+import { RootState } from '../reducers/_index';
 
 export function addTodo(todo: Todo): TodoAction {
 	return {
@@ -11,7 +12,7 @@ export function addTodo(todo: Todo): TodoAction {
 export function completeTodo(todoId: number) {
 	// here you could do API eg
 
-	return (dispatch: Function, getState: Function) => {
+	return (dispatch: Function, getState: () => RootState) => {
 		dispatch({ type: TodoActions.COMPLETE_TODO, payload: todoId });
 	};
 }
