@@ -38,6 +38,11 @@ jobs:
           wait-on: "http://127.0.0.1:3000"
           # wait for 2 minutes for the server to respond
           wait-on-timeout: 120
+      - uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
       - name: Generate Test Coverage report
         run: npm run coverage
       - name: Commit Test Coverage
