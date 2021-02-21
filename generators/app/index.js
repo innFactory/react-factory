@@ -155,7 +155,9 @@ const filesArray = [
   { src: ".vscode/**", dest: ".vscode" },
   // SRC
   { src: "src/actions/index.ts", dest: "src/actions/index.ts" },
+  { src: "src/actions/config.ts", dest: "src/actions/config.ts" },
   { src: "src/actions/todo.ts", dest: "src/actions/todo.ts" },
+
 
   { src: "src/components/Drawer.tsx", dest: "src/components/Drawer.tsx" },
   { src: "src/components/HomeBox.tsx", dest: "src/components/HomeBox.tsx" },
@@ -163,7 +165,7 @@ const filesArray = [
   { src: "src/components/TodoDialog.tsx", dest: "src/components/TodoDialog.tsx" },
   { src: "src/components/TodoTable.tsx", dest: "src/components/TodoTable.tsx" },
 
-
+  { src: "src/model/config.ts", dest: "src/model/config.ts" },
   { src: "src/model/todo.ts", dest: "src/model/todo.ts" },
   { src: "src/model/_index.ts", dest: "src/model/index.ts" },
 
@@ -173,6 +175,7 @@ const filesArray = [
     src: "src/reducers/createReducer.ts",
     dest: "src/reducers/createReducer.ts"
   },
+    { src: "src/reducers/config.ts", dest: "src/reducers/config.ts" },
   { src: "src/reducers/todo.ts", dest: "src/reducers/todo.ts" },
   { src: "src/reducers/_index.ts", dest: "src/reducers/index.ts" },
 

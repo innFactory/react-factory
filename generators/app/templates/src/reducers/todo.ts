@@ -1,6 +1,5 @@
 import { ConfigActions } from '../model/config';
 import { Todo, TodoAction, TodoActions } from '../model/index';
-import { TodoAction } from '../model/todo';
 import createReducer from './createReducer';
 
 export const todoList = createReducer<Todo[]>([], {
