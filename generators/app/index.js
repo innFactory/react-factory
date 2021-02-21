@@ -157,7 +157,12 @@ const filesArray = [
   { src: "src/actions/index.ts", dest: "src/actions/index.ts" },
   { src: "src/actions/todo.ts", dest: "src/actions/todo.ts" },
 
-  { src: "src/components/**", dest: "src" },
+  { src: "src/components/Drawer.tsx", dest: "src/components/Drawer.tsx" },
+  { src: "src/components/HomeBox.tsx", dest: "src/components/HomeBox.tsx" },
+  { src: "src/components/index.ts", dest: "src/components/index.ts" },
+  { src: "src/components/TodoDialog.tsx", dest: "src/components/TodoDialog.tsx" },
+  { src: "src/components/TodoTable.tsx", dest: "src/components/TodoTable.tsx" },
+
 
   { src: "src/model/todo.ts", dest: "src/model/todo.ts" },
   { src: "src/model/_index.ts", dest: "src/model/index.ts" },
