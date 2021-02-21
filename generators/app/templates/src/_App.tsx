@@ -12,6 +12,8 @@ import { withRoot } from "./withRoot";
 import { useSelector } from 'react-redux';
 import { useActions } from './actions';
 import * as ConfigActions from './actions/config';
+import { RootState } from "./reducers";
+import { router } from "./Router";
 
 <% if (includeSnackbars) { %>import { Snackbar } from './components/Snackbar';<% } %>
 

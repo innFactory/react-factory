@@ -69,7 +69,7 @@ function Content() {
 			<div className={classes.drawerHeader} />
 			<Divider />
 			<List>
-				<ListItem button onClick={() => history.push(router.organisations().$)} selected={home}>
+				<ListItem button onClick={() => history.push(router.home().$)} selected={home}>
 					<ListItemIcon>
 						<HomeIcon />
 					</ListItemIcon>

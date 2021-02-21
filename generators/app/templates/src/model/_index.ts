@@ -2,7 +2,7 @@
     import { TodoAction } from './todo';
     import { ConfigAction } from './config';
 
-
+export * from './config';
 export * from './todo';
 <% if (includeSnackbars) { %>
 export * from './snackbarEvent';<% } %>
