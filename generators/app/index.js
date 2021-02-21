@@ -151,20 +151,13 @@ const filesArray = [
   { src: "vscode_snippet0.png", dest: "vscode_snippet0.png" },
   { src: "vscode_snippet1.png", dest: "vscode_snippet1.png" },
   { src: "vscode_snippet2.png", dest: "vscode_snippet2.png" },
-  { src: "typings/**", dest: "typings" },
   { src: "public/**", dest: "public" },
   { src: ".vscode/**", dest: ".vscode" },
   // SRC
   { src: "src/actions/index.ts", dest: "src/actions/index.ts" },
   { src: "src/actions/todo.ts", dest: "src/actions/todo.ts" },
 
-  { src: "src/components/HomeBox.tsx", dest: "src/components/HomeBox.tsx" },
-  { src: "src/components/index.ts", dest: "src/components/index.ts" },
-  {
-    src: "src/components/TodoDialog.tsx",
-    dest: "src/components/TodoDialog.tsx"
-  },
-  { src: "src/components/TodoTable.tsx", dest: "src/components/TodoTable.tsx" },
+  { src: "src/components/**", dest: "src" },
 
   { src: "src/model/todo.ts", dest: "src/model/todo.ts" },
   { src: "src/model/_index.ts", dest: "src/model/index.ts" },
@@ -182,9 +175,9 @@ const filesArray = [
 
   { src: "src/_index.tsx", dest: "src/index.tsx" },
   { src: "src/configureStore.tsx", dest: "src/configureStore.tsx" },
-  { src: "src/react-app-env.d.ts", dest: "src/react-app-env.d.ts" },
+  { src: "src/typings.d.ts", dest: "src/typings.d.ts" },
   { src: "src/ReduxRoot.tsx", dest: "src/ReduxRoot.tsx" },
-
+  { src: "src/Router.tsx", dest: "src/Router.tsx" },
   { src: "src/withRoot.tsx", dest: "src/withRoot.tsx" }
 ];
 
