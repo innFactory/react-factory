@@ -9,14 +9,23 @@ import { RouterSwitch } from 'react-typesafe-routes';
 import { Drawer } from "./components/Drawer";
 import { history } from "./configureStore";
 import { withRoot } from "./withRoot";
+import { useSelector } from 'react-redux';
+import { useActions } from './actions';
+import * as ConfigActions from './actions/config';
 
 <% if (includeSnackbars) { %>import { Snackbar } from './components/Snackbar';<% } %>
 
 function App() {
 	const classes = useStyles();
+	const drawerOpen: boolean = useSelector((state: RootState) => state.drawerOpen);
+	const configActions: typeof ConfigActions = useActions(ConfigActions);
 	const isMobile = useMediaQuery((theme: Theme) =>
 		theme.breakpoints.down("sm")
 	);
+
+	const handleDrawerToggle = () => {
+		configActions.setDrawerOpen(!drawerOpen);
+	};
 
 
 	return (

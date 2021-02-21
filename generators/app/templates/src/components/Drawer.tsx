@@ -9,13 +9,16 @@ import { RootState } from '../reducers';
 import { router } from '../Router';
 import { useRoutesActive } from 'react-typesafe-routes';
 import { useHistory } from 'react-router-dom';
+import { useActions } from '../actions';
+import * as ConfigActions from '../actions/config';
 
 export function Drawer() {
 	const classes = useStyles();
-	const [mobileOpen, setMobileOpen] = React.useState(true);
+	const drawerOpen: boolean = useSelector((state: RootState) => state.drawerOpen);
+	const configActions: typeof ConfigActions = useActions(ConfigActions);
 
 	const handleDrawerToggle = () => {
-		setMobileOpen(!mobileOpen);
+		configActions.setDrawerOpen(!drawerOpen);
 	};
 
 	return (
@@ -24,7 +27,7 @@ export function Drawer() {
 				<DrawerMui
 					variant="temporary"
 					anchor={'left'}
-					open={mobileOpen}
+					open={drawerOpen}
 					classes={{
 						paper: classes.drawerPaper,
 					}}

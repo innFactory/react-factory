@@ -1,5 +1,5 @@
 import { Todo, TodoAction, TodoActions } from '../model/index';
-import { RootState } from '../reducers/_index';
+import { RootState } from '../reducers/index';
 
 export function addTodo(todo: Todo): TodoAction {
 	return {
