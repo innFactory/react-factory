@@ -145,6 +145,7 @@ const filesArray = [
     dest: ".gitignore"
   },
   { src: "screenshot.png", dest: "screenshot.png" },
+  { src: "react_factory.png", dest: "react_factory.png" },
   { src: "tsconfig.json", dest: "tsconfig.json" },
   { src: "tsconfig.prod.json", dest: "tsconfig.prod.json" },
   { src: "tsconfig.test.json", dest: "tsconfig.test.json" },
